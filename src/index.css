@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sf-pro text-primary bg-background;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat;
+  }
+}
+
+@layer utilities {
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Noise Texture Background */
+  .bg-noise-dark {
+    background-color: #1a1a1a;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  
+  .bg-noise-gray {
+    background-color: #2a2a2a;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  }
+  
+  .text-dark {
+    color: #1a1a1a;
+  }
+}
+
+/* TipTap Editor Styles - Match Blog Content */
+.ProseMirror {
+  @apply focus:outline-none text-dark font-sf-pro min-h-[400px] p-6;
+}
+
+.ProseMirror h1 {
+  @apply text-4xl font-black mb-6 mt-8 font-montserrat text-dark tracking-tight;
+}
+
+.ProseMirror h2 {
+  @apply text-3xl font-black mb-5 mt-6 font-montserrat text-dark tracking-tight;
+}
+
+.ProseMirror h3 {
+  @apply text-2xl font-black mb-4 mt-4 font-montserrat text-dark tracking-tight;
+}
+
+.ProseMirror h4 {
+  @apply text-xl font-bold mb-3 mt-4 font-montserrat text-dark;
+}
+
+.ProseMirror h5 {
+  @apply text-lg font-bold mb-2 mt-3 font-montserrat text-dark;
+}
+
+.ProseMirror h6 {
+  @apply text-base font-bold mb-2 mt-3 font-montserrat text-dark;
+}
+
+.ProseMirror p {
+  @apply mb-4 leading-relaxed text-lg text-dark;
+}
+
+.ProseMirror ul {
+  @apply list-disc pl-8 mb-4 space-y-2;
+}
+
+.ProseMirror ul li {
+  @apply text-dark text-lg;
+}
+
+.ProseMirror ol {
+  @apply list-decimal pl-8 mb-4 space-y-2;
+}
+
+.ProseMirror ol li {
+  @apply text-dark text-lg;
+}
+
+.ProseMirror blockquote {
+  @apply border-l-4 border-primary bg-primary/5 pl-6 pr-6 py-4 italic my-6 text-dark;
+}
+
+.ProseMirror a {
+  @apply text-primary font-bold no-underline hover:underline;
+}
+
+.ProseMirror strong {
+  @apply font-black text-dark;
+}
+
+.ProseMirror em {
+  @apply italic;
+}
+
+.ProseMirror img {
+  @apply max-w-full h-auto border-4 border-gray-200 my-6;
+}
+
+.ProseMirror code {
+  @apply bg-gray-100 px-2 py-1 text-sm font-mono text-dark border border-gray-300;
+}
+
+.ProseMirror pre {
+  @apply bg-noise-dark text-white p-4 overflow-x-auto mb-4 border-4 border-dark font-mono text-sm;
+}
+
+.ProseMirror pre code {
+  @apply bg-transparent border-0 text-white;
+}
+
+.ProseMirror hr {
+  @apply border-t-2 border-dark my-8;
+}
+
+/* Blog Content Styles - Professional Black Text with Forest Green Accents */
+.blog-content {
+  @apply text-dark font-sf-pro;
+}
+
+.blog-content h1 {
+  @apply text-4xl font-black mb-6 mt-12 font-montserrat text-dark tracking-tight leading-tight;
+}
+
+.blog-content h2 {
+  @apply text-3xl font-black mb-5 mt-10 font-montserrat text-dark tracking-tight leading-tight;
+}
+
+.blog-content h3 {
+  @apply text-2xl font-black mb-4 mt-8 font-montserrat text-dark tracking-tight leading-tight;
+}
+
+.blog-content h4 {
+  @apply text-xl font-bold mb-3 mt-6 font-montserrat text-dark;
+}
+
+.blog-content h5 {
+  @apply text-lg font-bold mb-2 mt-4 font-montserrat text-dark;
+}
+
+.blog-content h6 {
+  @apply text-base font-bold mb-2 mt-4 font-montserrat text-dark;
+}
+
+.blog-content p {
+  @apply mb-6 leading-relaxed text-lg text-dark;
+}
+
+.blog-content ul {
+  @apply list-disc pl-8 mb-6 space-y-2;
+}
+
+.blog-content ul li {
+  @apply text-dark leading-relaxed text-lg;
+}
+
+.blog-content ol {
+  @apply list-decimal pl-8 mb-6 space-y-2;
+}
+
+.blog-content ol li {
+  @apply text-dark leading-relaxed text-lg;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-primary bg-primary/5 pl-6 pr-6 py-4 italic my-8 text-dark text-lg;
+}
+
+.blog-content a {
+  @apply text-primary font-bold no-underline hover:underline transition-all;
+}
+
+.blog-content strong {
+  @apply font-black text-dark;
+}
+
+.blog-content em {
+  @apply italic text-dark;
+}
+
+.blog-content img {
+  @apply max-w-full h-auto border-4 border-gray-200 my-8;
+}
+
+.blog-content pre {
+  @apply bg-noise-dark text-white p-6 overflow-x-auto mb-6 border-4 border-dark font-mono text-sm;
+}
+
+.blog-content code {
+  @apply bg-gray-100 px-2 py-1 text-sm font-mono text-dark border border-gray-300;
+}
+
+.blog-content pre code {
+  @apply bg-transparent border-0 text-white;
+}
+
+.blog-content hr {
+  @apply border-t-2 border-dark my-12;
+}
+
+.blog-content table {
+  @apply w-full border-4 border-dark my-8;
+}
+
+.blog-content th {
+  @apply bg-noise-dark text-white font-black p-4 text-left border-2 border-dark;
+}
+
+.blog-content td {
+  @apply p-4 border-2 border-gray-200 text-dark;
+}
+
+/* First paragraph drop cap effect */
+.blog-content > p:first-of-type::first-letter {
+  @apply text-6xl font-black text-primary float-left mr-2 leading-none;
+}
+
+/* Animation for notifications */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
