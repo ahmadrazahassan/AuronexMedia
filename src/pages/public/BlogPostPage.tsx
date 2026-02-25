@@ -198,8 +198,6 @@ export const BlogPostPage: React.FC = () => {
             {post.title}
           </h1>
           <div className="flex flex-wrap items-center gap-4 text-secondary font-sf-pro">
-            <span>{post.author?.name}</span>
-            <span>•</span>
             <span>{formatDate(post.published_at || post.created_at)}</span>
             {post.estimated_read_time && (
               <>
@@ -207,8 +205,6 @@ export const BlogPostPage: React.FC = () => {
                 <span>{post.estimated_read_time} min read</span>
               </>
             )}
-            <span>•</span>
-            <span>{post.view_count.toLocaleString()} views</span>
           </div>
         </header>
 
